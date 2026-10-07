@@ -1,37 +1,75 @@
-# JupyterLite Demo
+# Frontiers in AI and Data Science (6CM521): Interactive Course Materials
 
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlite.github.io/demo)
+[!\[lite-badge](https://jupyterlite.rtfd.io/en/latest/\_static/badge.svg)](https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPOSITORY_NAME/lab/index.html)
 
-JupyterLite deployed as a static site to GitHub Pages, for demo purposes.
+This repository has all the lectures, labs, notebooks and datasets for the module **Frontiers in AI and Data Science (6CM521)**. It is published as a **JupyterLite** website, so you can open and run the notebooks **directly in your browser**. You don't need to install Python, Anaconda or Jupyter.
 
-## ✨ Try it in your browser ✨
+The site is built from the [jupyterlite/demo](https://github.com/jupyterlite/demo) template and deployed automatically to GitHub Pages.
 
-➡️ **https://jupyterlite.github.io/demo**
+## ✨ Open it in your browser
 
-![github-pages](https://user-images.githubusercontent.com/591645/120649478-18258400-c47d-11eb-80e5-185e52ff2702.gif)
+➡️ **https://christsall99.github.io/frontiers\_in\_ai\_and\_data\_science/lab/index.html**
 
-## Requirements
+The first load can take 10–30 seconds while the Python runtime (Pyodide) downloads. After that, notebooks open instantly.
 
-JupyterLite is being tested against modern web browsers:
+## 📚 What's inside
 
-- Firefox 90+
-- Chromium 89+
+All course material is in the [`content/`](content) folder. It shows up as the file browser on the left side of the JupyterLite site.
 
-## Deploy your JupyterLite website on GitHub Pages
+|Folder|Topics|
+|-|-|
+|`Week 1-7/Week 1`|Introduction to the module, Python crash course and exercises|
+|`Week 1-7/Week 2`|Data preprocessing, Pandas (Series, DataFrames, missing data, groupby, merging, I/O)|
+|`Week 1-7/Week 3`|Exploratory Data Analysis (Titanic and e-commerce examples)|
+|`Week 1-7/Week 4`|Mining frequent patterns, association rules, correlation analysis|
+|`Week 1-7/Week 5`|Regression problems, Python for machine learning, assessment brief|
+|`Week 1-7/Week 6`|Classification and decision tree induction|
+|`Week 1-7/Week 7`|Random forests and KNN, association rule mining practice|
+|`Week 8-11/Week 8`|Clustering (unsupervised learning)|
+|`Week 8-11/Week 9`|Generative AI and prompt engineering|
+|`Week 8-11/Week 10`|Reinforcement learning|
+|`Week 8-11/Week 11`|Lab session|
+|`Week 13-14`|Artificial neural networks and explainable AI (XAI)|
+|`Week 15-16`|Object detection (TensorFlow / YOLOv3), model explanation with SHAP, LIME, ELI5, Anchor|
+|*(root of `content/`)*|Case studies: RAG + MCP + LLM, agentic AI for economics, LoRA / QLoRA fine-tuning, YOLOv8 on a custom dataset|
 
-Check out the guide on the JupyterLite documentation: https://jupyterlite.readthedocs.io/en/latest/quickstart/deploy.html
+Lecture slides (`.pptx`, `.ppt`) and documents (`.pdf`, `.docx`) are included too. You can **download** them from the file browser (right-click → *Download*). PDFs open directly in the browser.
 
-## Further Information and Updates
+## ▶️ How to use the notebooks
 
-For more info, keep an eye on the JupyterLite documentation:
+1. Open the site link above.
+2. Use the file browser on the left to go to a week's folder.
+3. Double-click a `.ipynb` notebook to open it.
+4. Run cells with **Shift + Enter**.
 
-- How-to Guides: https://jupyterlite.readthedocs.io/en/latest/howto/index.html
-- Reference: https://jupyterlite.readthedocs.io/en/latest/reference/index.html
+### Things to know about running in the browser
 
-This template provides the Pyodide kernel (`jupyterlite-pyodide-kernel`), the JavaScript kernel (`jupyterlite-javascript-kernel`), and the p5 kernel (`jupyterlite-p5-kernel`), along with other
-optional utilities and extensions to make the JupyterLite experience more enjoyable. See the
-[`requirements.txt` file](requirements.txt) for a list of all the dependencies provided.
+* **Your changes are saved in your browser only** (local browser storage). They are not saved to GitHub. To keep your work, right-click the notebook → *Download*.
+* **Clearing your browser data deletes your edits.** The original files on the site are never changed.
+* **Common libraries work out of the box:** `numpy`, `pandas`, `matplotlib`, `scikit-learn`, `scipy` and others bundled with Pyodide.
+* **Extra pure-Python packages** can often be installed inside a notebook with:
 
-For a template based on the Xeus kernel, see the [`jupyterlite/xeus-python-demo` repository](https://github.com/jupyterlite/xeus-python-demo)
+```python
+  %pip install mlxtend
+  ```
 
+* **Some notebooks need a real machine or GPU and will not run in the browser.** These include deep learning and fine-tuning notebooks such as `QLoRA\_customer\_support.ipynb`, `YOLOv8\_object\_detection\_on\_custom\_dataset.ipynb` and the TensorFlow object-detection demo. You can still **read** them here. To run them, use Google Colab, Kaggle or a local Jupyter installation.
+
+## 🛠️ How this site is built
+
+* Course files live in `content/`.
+* Each push to the `main` branch runs a GitHub Actions workflow (`.github/workflows/`). It builds the JupyterLite site and deploys it to GitHub Pages.
+* The JupyterLite version and kernels are set in `requirements.txt`.
+
+### Updating the materials
+
+1. Add, change or delete files inside `content/` (for example with GitHub Desktop).
+2. Commit and push to `main`.
+3. Wait about 2–5 minutes for the **Actions** tab to show a green check.
+4. Hard-refresh the site (**Ctrl + F5**) to see the new version.
+
+## 🙏 Credits
+
+* Built with [JupyterLite](https://github.com/jupyterlite/jupyterlite) and the [jupyterlite/demo](https://github.com/jupyterlite/demo) template (BSD-3-Clause license).
+* Course materials: *Frontiers in AI and Data Science (6CM521)*.
 
