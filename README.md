@@ -1,6 +1,6 @@
 # Frontiers in AI and Data Science (6CM521): Interactive Course Materials
 
-[!\[lite-badge](https://jupyterlite.rtfd.io/en/latest/\_static/badge.svg)](https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPOSITORY_NAME/lab/index.html)
+[!\[lite-badge](https://jupyterlite.rtfd.io/en/latest/\_static/badge.svg)](https://christsall99.github.io/frontiers_in_ai_and_data_science/lab/index.html)
 
 This repository has all the lectures, labs, notebooks and datasets for the module **Frontiers in AI and Data Science (6CM521)**. It is published as a **JupyterLite** website, so you can open and run the notebooks **directly in your browser**. You don't need to install Python, Anaconda or Jupyter.
 
