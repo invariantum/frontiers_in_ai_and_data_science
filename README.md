@@ -6,7 +6,7 @@ The site is built from the [jupyterlite/demo](https://github.com/jupyterlite/dem
 
 ## ✨ Open it in your browser
 
-➡️ **https://invariantum.github.io/frontiers\_in\_ai\_and\_data\_science/lab/index.html**
+➡️ **https://invariantum.github.io/frontiers_in_ai_and_data_science/lab/index.html**
 
 The first load can take 10–30 seconds while the Python runtime (Pyodide) downloads. After that, notebooks open instantly.
 
