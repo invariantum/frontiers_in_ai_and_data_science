@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - '*'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -14,17 +12,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Python
-        uses: actions/setup-python@v5
+
+      - name: Install build tools
+        uses: mamba-org/setup-micromamba@v1
         with:
-          python-version: '3.11'
-      - name: Install the dependencies
-        run: |
-          python -m pip install -r requirements.txt
+          micromamba-version: '1.5.8-0'
+          environment-file: .github/build-environment.yml
+          cache-environment: true
+
       - name: Build the JupyterLite site
+        shell: bash -l {0}
         run: |
-          cp README.md content
           jupyter lite build --contents content --output-dir dist
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -36,11 +36,9 @@ jobs:
     permissions:
       pages: write
       id-token: write
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
