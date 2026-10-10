@@ -26,10 +26,21 @@ dependencies:
 
   # Pure-Python packages from PyPI.
   # These are installed WITHOUT their dependencies, so each dependency is listed too.
-  # openpyxl is here (not above) because the browser channel only offers 3.0.9,
-  # and pandas needs 3.1.5 or newer to read .xlsx files.
   - pip:
+      # Excel (.xlsx needs openpyxl 3.1.5+, the browser channel only has 3.0.9; .xls needs xlrd)
       - et-xmlfile
       - openpyxl==3.1.5
       - xlrd
+      # HTML tables: pd.read_html(..., flavor='bs4')
+      - beautifulsoup4
+      - soupsieve
+      - html5lib
+      - six
+      - webencodings
+      # SQL: pd.to_sql / pd.read_sql with SQLAlchemy
+      - sqlalchemy
+      - typing-extensions
+      # Missing-data plots (Week 3 Titanic notebook)
+      - missingno
+      # Pretty tables
       - tabulate
