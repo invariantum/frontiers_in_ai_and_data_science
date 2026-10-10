@@ -2,27 +2,33 @@ name: xeus-kernel
 channels:
   - https://repo.prefix.dev/emscripten-forge-dev
   - https://repo.prefix.dev/conda-forge
+
+# Versions are PINNED to the set tested on 10 Oct 2026 (00_Environment_Check: all OK),
+# so a library update cannot change the course mid-term.
+# To upgrade between terms: change the numbers, push, then run 00_Environment_Check
+# and the course notebooks again before students use the site.
 dependencies:
+  - python =3.13
   - xeus-python
 
   # Core data science
-  - numpy
-  - pandas
-  - scipy
-  - scikit-learn
-  - statsmodels
+  - numpy =2.4.4
+  - pandas =3.0.2
+  - scipy =1.17.1
+  - scikit-learn =1.8.0
+  - statsmodels =0.14.6
 
   # Visualisation and interactivity
-  - matplotlib
-  - seaborn
-  - plotly
-  - ipywidgets
+  - matplotlib =3.10.8
+  - seaborn =0.13.2
+  - plotly =7.1.0
+  - ipywidgets =8.1.9
 
   # Association rules, maths, graphs, images
-  - mlxtend
-  - sympy
-  - networkx
-  - pillow
+  - mlxtend =0.25.0
+  - sympy =1.12
+  - networkx =3.7
+  - pillow =12.2.0
 
   # Pure-Python packages from PyPI.
   # These are installed WITHOUT their dependencies, so each dependency is listed too.
@@ -32,15 +38,15 @@ dependencies:
       # Excel (.xlsx needs openpyxl 3.1.5+, the browser channel only has 3.0.9; .xls needs xlrd)
       - et-xmlfile
       - openpyxl==3.1.5
-      - xlrd
+      - xlrd==2.0.2
       # HTML tables: pd.read_html(..., flavor='bs4')
-      - beautifulsoup4
+      - beautifulsoup4==4.15.0
       - soupsieve
       - typing-extensions
-      - html5lib
+      - html5lib==1.1
       - six
       - webencodings
       # Missing-data plots (Week 3 Titanic notebook)
-      - missingno
+      - missingno==0.5.2
       # Pretty tables
-      - tabulate
+      - tabulate==0.10.0
