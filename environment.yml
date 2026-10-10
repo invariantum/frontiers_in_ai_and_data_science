@@ -26,6 +26,8 @@ dependencies:
 
   # Pure-Python packages from PyPI.
   # These are installed WITHOUT their dependencies, so each dependency is listed too.
+  # ONLY pure-Python packages may go here: anything with compiled code (e.g. sqlalchemy)
+  # makes the build fail. SQL lessons use Python's built-in sqlite3 instead.
   - pip:
       # Excel (.xlsx needs openpyxl 3.1.5+, the browser channel only has 3.0.9; .xls needs xlrd)
       - et-xmlfile
@@ -34,12 +36,10 @@ dependencies:
       # HTML tables: pd.read_html(..., flavor='bs4')
       - beautifulsoup4
       - soupsieve
+      - typing-extensions
       - html5lib
       - six
       - webencodings
-      # SQL: pd.to_sql / pd.read_sql with SQLAlchemy
-      - sqlalchemy
-      - typing-extensions
       # Missing-data plots (Week 3 Titanic notebook)
       - missingno
       # Pretty tables
