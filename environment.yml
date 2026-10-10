@@ -4,13 +4,32 @@ channels:
   - https://repo.prefix.dev/conda-forge
 dependencies:
   - xeus-python
+
+  # Core data science
   - numpy
   - pandas
-  - openpyxl
   - scipy
   - scikit-learn
+  - statsmodels
+
+  # Visualisation and interactivity
   - matplotlib
   - seaborn
   - plotly
   - ipywidgets
+
+  # Association rules, maths, graphs, images
   - mlxtend
+  - sympy
+  - networkx
+  - pillow
+
+  # Pure-Python packages from PyPI.
+  # These are installed WITHOUT their dependencies, so each dependency is listed too.
+  # openpyxl is here (not above) because the browser channel only offers 3.0.9,
+  # and pandas needs 3.1.5 or newer to read .xlsx files.
+  - pip:
+      - et-xmlfile
+      - openpyxl==3.1.5
+      - xlrd
+      - tabulate
