@@ -1,73 +1,80 @@
 # Frontiers in AI and Data Science (6CM521): Interactive Course Materials
 
-This repository has all the lectures, labs, notebooks and datasets for the module **Frontiers in AI and Data Science (6CM521)**. It is published as a **JupyterLite** website, so you can open and run the notebooks **directly in your browser**. You don't need to install Python, Anaconda or Jupyter.
+This repository holds the lectures, labs, notebooks and datasets for the module **Frontiers in AI and Data Science (6CM521)** at Mediterranean College. It is published as a **JupyterLite** website, so students open and run the notebooks **directly in the browser**, with nothing to install.
 
-The site is built from the [jupyterlite/demo](https://github.com/jupyterlite/demo) template and deployed automatically to GitHub Pages.
-
-## ✨ Open it in your browser
+## Open it in your browser
 
 ➡️ **https://invariantum.github.io/frontiers_in_ai_and_data_science/lab/index.html**
 
-The first load can take 10–30 seconds while the Python runtime (Pyodide) downloads. After that, notebooks open instantly.
+The first load takes 10–30 seconds while Python downloads into the browser. After that, it opens in a few seconds.
 
-## 📚 What's inside
+Use a normal (not private/incognito) Chrome, Edge or Firefox window: in a private window the notebooks cannot see their data files.
 
-All course material is in the [`content/`](content) folder. It shows up as the file browser on the left side of the JupyterLite site.
+## What's inside
 
-|Folder|Topics|
+All course material is in the [`content/`](content) folder, which appears as the file browser on the left of the site.
+
+| Folder | Topics |
 |-|-|
-|`Week 1-7/Week 1`|Introduction to the module, Python crash course and exercises|
-|`Week 1-7/Week 2`|Data preprocessing, Pandas (Series, DataFrames, missing data, groupby, merging, I/O)|
-|`Week 1-7/Week 3`|Exploratory Data Analysis (Titanic and e-commerce examples)|
-|`Week 1-7/Week 4`|Mining frequent patterns, association rules, correlation analysis|
-|`Week 1-7/Week 5`|Regression problems, Python for machine learning, assessment brief|
-|`Week 1-7/Week 6`|Classification and decision tree induction|
-|`Week 1-7/Week 7`|Random forests and KNN, association rule mining practice|
-|`Week 8-11/Week 8`|Clustering (unsupervised learning)|
-|`Week 8-11/Week 9`|Generative AI and prompt engineering|
-|`Week 8-11/Week 10`|Reinforcement learning|
-|`Week 8-11/Week 11`|Lab session|
-|`Week 13-14`|Artificial neural networks and explainable AI (XAI)|
-|`Week 15-16`|Object detection (TensorFlow / YOLOv3), model explanation with SHAP, LIME, ELI5, Anchor|
-|*(root of `content/`)*|Case studies: RAG + MCP + LLM, agentic AI for economics, LoRA / QLoRA fine-tuning, YOLOv8 on a custom dataset|
+| `00_start_here` | Environment check notebook, assessment brief, useful links |
+| `week01_introduction` | Introduction to the module; Python crash course and exercises |
+| `week02_data_preprocessing` | Data preprocessing with Pandas: Series, DataFrames, missing data, groupby, merging, input/output |
+| `week03_exploratory_data_analysis` | Exploratory data analysis (e-commerce and Titanic examples) |
+| `week04_frequent_patterns` | Frequent patterns, association rules, correlation analysis |
+| `week05_regression` | Regression; machine learning lab (used in Weeks 5–8) |
+| `week06_classification_decision_trees` | Classification and decision tree induction |
+| `week07_random_forests_knn` | Random forests and KNN (association rule practice: Week 4 lab) |
+| `week08_clustering` | Clustering (unsupervised learning) |
+| `week09_generative_ai_prompting` | Generative AI and prompt engineering; LLM APIs lab |
+| `week10_reinforcement_learning` | Reinforcement learning |
+| `week11_reinforcement_learning_lab` | Reinforcement learning lab (FrozenLake) |
+| `week13-14_neural_networks_xai` | Artificial neural networks and explainable AI; fine-tuning and evaluation lab |
+| `week15-16_object_detection_explainability` | Object detection; explaining models with SHAP, LIME, ELI5 and Anchor |
+| `extras` | Case studies: RAG + MCP + LLMs, agentic AI for economics, LoRA / QLoRA fine-tuning, YOLOv8 |
 
-Lecture slides (`.pptx`, `.ppt`) and documents (`.pdf`, `.docx`) are included too. You can **download** them from the file browser (right-click → *Download*). PDFs open directly in the browser.
+Every week folder uses the same layout: `lecture/` (slides as PDF to view in the browser, plus the PowerPoint), `lab/` (notebooks in the order to work through them, their data files and lab sheets) and, where needed, `reading/`.
 
-## ▶️ How to use the notebooks
+### Naming conventions
+
+* Lowercase, underscores, no spaces: the name typed in code always matches the file.
+* Two-digit week numbers (`week02`, `week10`) so folders sort correctly everywhere.
+* Notebooks are numbered in the order to do them (`01_`, `02_`, …).
+* Slides and lab sheets carry their week in the name (`week05_regression.pdf`), so they stay identifiable after download.
+* Data files sit next to the notebooks that use them, and notebooks read them by file name only.
+* `_readonly` marks notebooks that need a GPU or libraries that cannot run in a browser. They open with a notice at the top and are meant to be read.
+
+## How to use the notebooks
 
 1. Open the site link above.
-2. Use the file browser on the left to go to a week's folder.
-3. Double-click a `.ipynb` notebook to open it.
-4. Run cells with **Shift + Enter**.
+2. First time only: open `00_start_here/00_environment_check.ipynb` and choose **Run → Run All Cells**. Every line should say **OK**.
+3. Open a week's `lab` folder and double-click a notebook (`.ipynb`).
+4. Run a cell with **Shift + Enter**, or all cells with **Run → Run All Cells**.
 
 ### Things to know about running in the browser
 
-* **Your changes are saved in your browser only** (local browser storage). They are not saved to GitHub. To keep your work, right-click the notebook → *Download*.
-* **Clearing your browser data deletes your edits.** The original files on the site are never changed.
-* **Common libraries work out of the box:** `numpy`, `pandas`, `matplotlib`, `scikit-learn`, `scipy` and others bundled with Pyodide.
-* **Extra pure-Python packages** can often be installed inside a notebook with:
+* **Your changes are saved in your browser only.** To keep your work, right-click the notebook → **Download**. Clearing your browser data deletes your edits; the original files on the site never change.
+* **If a notebook looks out of date**, your browser is showing your own older saved copy. Download it if you want to keep your changes, then right-click it → **Delete** and reload the page.
+* **Pre-installed libraries:** numpy, pandas, scipy, scikit-learn, statsmodels, matplotlib, seaborn, plotly, ipywidgets, mlxtend, sympy, networkx, pillow, missingno, openpyxl, xlrd, beautifulsoup4, html5lib and tabulate. SQL lessons use Python's built-in `sqlite3`.
+* **No internet access from code.** Notebooks cannot download files from websites; every dataset is stored next to its notebook.
 
-```python
-  %pip install mlxtend
-  ```
-
-* **Some notebooks need a real machine or GPU and will not run in the browser.** These include deep learning and fine-tuning notebooks such as `QLoRA\_customer\_support.ipynb`, `YOLOv8\_object\_detection\_on\_custom\_dataset.ipynb` and the TensorFlow object-detection demo. You can still **read** them here. To run them, use Google Colab, Kaggle or a local Jupyter installation.
-
-## 🛠️ How this site is built
+## How this site is built
 
 * Course files live in `content/`.
-* Each push to the `main` branch runs a GitHub Actions workflow (`.github/workflows/`). It builds the JupyterLite site and deploys it to GitHub Pages.
-* The JupyterLite version and kernels are set in `requirements.txt`.
+* Each push to `main` runs the GitHub Actions workflow in `.github/workflows/deploy.yml`, which builds the JupyterLite site and deploys it to GitHub Pages.
+* The browser Python kernel is **xeus-python**. Its packages and their exact versions are listed in [`environment.yml`](environment.yml); the build tools are in `.github/build-environment.yml`.
+* Only pure-Python packages may go under `pip:` in `environment.yml`; anything with compiled code makes the build fail.
 
 ### Updating the materials
 
-1. Add, change or delete files inside `content/` (for example with GitHub Desktop).
-2. Commit and push to `main`.
-3. Wait about 2–5 minutes for the **Actions** tab to show a green check.
-4. Hard-refresh the site (**Ctrl + F5**) to see the new version.
+1. In GitHub Desktop, click **Fetch origin** (and **Pull origin** if it appears) before changing anything.
+2. Add, change or delete files inside `content/`, following the naming conventions above.
+3. Commit and push to `main`.
+4. Wait 2–5 minutes for the **Actions** tab to show a green check, then hard-refresh the site (**Ctrl + F5**).
+5. After changing `environment.yml`, run `00_start_here/00_environment_check.ipynb` on the site again.
 
-## 🙏 Credits
+To upgrade libraries between terms, change the version numbers in `environment.yml`, push, then rerun the environment check and the course notebooks before students use the site.
 
-* Built with [JupyterLite](https://github.com/jupyterlite/jupyterlite) and the [jupyterlite/demo](https://github.com/jupyterlite/demo) template (BSD-3-Clause license).
+## Credits
+
+* Built with [JupyterLite](https://github.com/jupyterlite/jupyterlite), [jupyterlite-xeus](https://github.com/jupyterlite/xeus) and the [jupyterlite/demo](https://github.com/jupyterlite/demo) template (BSD-3-Clause license).
 * Course materials: *Frontiers in AI and Data Science (6CM521)*.
-
