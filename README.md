@@ -16,15 +16,15 @@ All course material is in the [`content/`](content) folder, which appears as the
 
 | Folder | Topics |
 |-|-|
-| `00_start_here` | Environment check notebook, assessment brief, useful links |
+| `00_start_here` | Environment check notebook, assessment brief (PDF and Word), useful links |
 | `week01_introduction` | Introduction to the module; Python crash course and exercises |
 | `week02_data_preprocessing` | Data preprocessing with Pandas: Series, DataFrames, missing data, groupby, merging, input/output |
 | `week03_exploratory_data_analysis` | Exploratory data analysis (e-commerce and Titanic examples) |
 | `week04_frequent_patterns` | Frequent patterns, association rules, correlation analysis |
-| `week05_regression` | Regression; machine learning lab (used in Weeks 5–8) |
-| `week06_classification_decision_trees` | Classification and decision tree induction |
-| `week07_random_forests_knn` | Random forests and KNN (association rule practice: Week 4 lab) |
-| `week08_clustering` | Clustering (unsupervised learning) |
+| `week05_regression` | Regression; Weeks 5–8 machine learning lab sheet (regression section) |
+| `week06_classification_decision_trees` | Classification and decision tree induction; Weeks 5–8 lab sheet (decision trees) |
+| `week07_random_forests_knn` | Random forests and KNN; Weeks 5–8 lab sheet (K-nearest neighbours) |
+| `week08_clustering` | Clustering (unsupervised learning); Weeks 5–8 lab sheet (clustering) |
 | `week09_generative_ai_prompting` | Generative AI and prompt engineering; LLM APIs lab |
 | `week10_reinforcement_learning` | Reinforcement learning |
 | `week11_reinforcement_learning_lab` | Reinforcement learning lab (FrozenLake) |
